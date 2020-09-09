@@ -28,6 +28,14 @@ spring:
           uri: http://localhost:8085
           predicates:
             - Path= /myPages/**
+        - id: productcheck
+          uri: http://localhost:8086
+          predicates:
+            - Path= /productChecks/**
+        - id: checkstatus
+          uri: http://localhost:8089
+          predicates:
+            - Path= /checkStatuses/**
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -67,6 +75,14 @@ spring:
           uri: http://mypage:8080
           predicates:
             - Path= /myPages/**
+        - id: productcheck
+          uri: http://productcheck:8080
+          predicates:
+            - Path= /productChecks/**
+        - id: checkstatus
+          uri: http://checkstatus:8080
+          predicates:
+            - Path= /checkStatuses/**
       globalcors:
         corsConfigurations:
           '[/**]':
